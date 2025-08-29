@@ -55,11 +55,14 @@ document.getElementById("call-button-emergency").addEventListener("click", funct
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
 
-     // Add to history (service name + number)
-    const entry = document.createElement("p");
-    entry.className = "p-2 border-b border-gray-300";
-    entry.innerHTML = `<strong>${serviceName}</strong> - ${number}`;
-    historyContainer.appendChild(entry);
+    // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">National Emergency Service</h2>
+        <p class="text-[#5C5C5C]">999</p>
+    `;
+    historySection.appendChild(entry);
 })
 // card 2
 document.getElementById("call-button-police").addEventListener("click", function(){
@@ -74,6 +77,15 @@ document.getElementById("call-button-police").addEventListener("click", function
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+
+     // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Police Helpline Number</h2>
+        <p class="text-[#5C5C5C]">999</p>
+    `;
+    historySection.appendChild(entry);
 })
 
 // card 3
@@ -90,6 +102,14 @@ document.getElementById("call-button-fire").addEventListener("click", function()
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+      // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Fire Service Number</h2>
+        <p class="text-[#5C5C5C]">999</p>
+    `;
+    historySection.appendChild(entry);
 })
 
 // card 4
@@ -105,6 +125,15 @@ document.getElementById("call-button-ambulance").addEventListener("click", funct
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+
+     // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Ambulance Service</h2>
+        <p class="text-[#5C5C5C]">1994-999999</p>
+    `;
+    historySection.appendChild(entry);
 })
 
 // card 5
@@ -121,6 +150,14 @@ document.getElementById("call-button-wc").addEventListener("click", function(){
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+    // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Women & Child Helpline</h2>
+        <p class="text-[#5C5C5C]">109</p>
+    `;
+    historySection.appendChild(entry);
 })
 
 // card 6
@@ -136,6 +173,16 @@ document.getElementById("call-button-corruption").addEventListener("click", func
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+
+    // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Anti-Corruption Helpline</h2>
+        <p class="text-[#5C5C5C]">106</p>
+    `;
+    historySection.appendChild(entry);
+    
 })
 
 // card 7
@@ -151,6 +198,14 @@ document.getElementById("call-button-electricity").addEventListener("click", fun
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+    // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Electricity Helpline</h2>
+        <p class="text-[#5C5C5C]">16216</p>
+    `;
+    historySection.appendChild(entry);
 })
 
 // card 8
@@ -166,6 +221,14 @@ document.getElementById("call-button-ngo").addEventListener("click", function(){
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+    // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Brac Helpline</h2>
+        <p class="text-[#5C5C5C]">16445</p>
+    `;
+    historySection.appendChild(entry);
 })
 
 // card 9
@@ -181,6 +244,15 @@ document.getElementById("call-button-railway").addEventListener("click", functio
 
     const newAvailableCoins = availableCoins - 20;
     setInnerText("available-coins", newAvailableCoins);
+
+    // history section
+     const entry = document.createElement("div");
+    entry.className = "ml-5 p-2 border-b border-gray-200";
+    entry.innerHTML = `
+        <h2 class="text-[20px] font-semibold">Bangladesh Railway Helpline</h2>
+        <p class="text-[#5C5C5C]">163</p>
+    `;
+    historySection.appendChild(entry);
 })
 
 
