@@ -64,7 +64,7 @@ document.getElementById("call-button-emergency").addEventListener("click", funct
   entry.innerHTML = `
         <div class ="flex justify-between">
         <div>
-        <h2 class="text-[20px] font-semibold">Police Helpline</h2>
+        <h2 class="text-[20px] font-semibold">National Emergency</h2>
         <p class="text-[#5C5C5C]">999</p>
         </div>
         <p class="text-lg text-gray-500"> ${time}</p>
@@ -76,193 +76,276 @@ document.getElementById("call-button-emergency").addEventListener("click", funct
 // card 2
 document.getElementById("call-button-police").addEventListener("click", function(){
     // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+    const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Police Helpline Service 999");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
 
-     // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
-        <h2 class="text-[20px] font-semibold">Police Helpline Number</h2>
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
+        <h2 class="text-[20px] font-semibold">Police Helpline</h2>
         <p class="text-[#5C5C5C]">999</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
 
 // card 3
 document.getElementById("call-button-fire").addEventListener("click", function(){
     
     // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+     const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Fire Service 999");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
-      // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
-        <h2 class="text-[20px] font-semibold">Fire Service Number</h2>
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
+
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
+        <h2 class="text-[20px] font-semibold">Fire Service</h2>
         <p class="text-[#5C5C5C]">999</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
 
 // card 4
 document.getElementById("call-button-ambulance").addEventListener("click", function(){
     // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+    const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Ambulance Service 1994-999999");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
 
-     // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
         <h2 class="text-[20px] font-semibold">Ambulance Service</h2>
         <p class="text-[#5C5C5C]">1994-999999</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
 
 // card 5
 
 document.getElementById("call-button-wc").addEventListener("click", function(){
     // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+    const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Women & Child Helpline 109");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
-    // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
+
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
         <h2 class="text-[20px] font-semibold">Women & Child Helpline</h2>
         <p class="text-[#5C5C5C]">109</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
 
 // card 6
 document.getElementById("call-button-corruption").addEventListener("click", function(){
     // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+    const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Anti-Corruption Helpline 106");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
 
-    // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
         <h2 class="text-[20px] font-semibold">Anti-Corruption Helpline</h2>
         <p class="text-[#5C5C5C]">106</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-    
-})
+  historySection.appendChild(entry);
+});
 
 // card 7
 document.getElementById("call-button-electricity").addEventListener("click", function(){
      // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+   const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Electricity Helpline 16216");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
-    // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
+
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
         <h2 class="text-[20px] font-semibold">Electricity Helpline</h2>
         <p class="text-[#5C5C5C]">16216</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
 
 // card 8
 document.getElementById("call-button-ngo").addEventListener("click", function(){
     // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+    const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Brac Helpline 16445");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
-    // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
+
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
         <h2 class="text-[20px] font-semibold">Brac Helpline</h2>
         <p class="text-[#5C5C5C]">16445</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
 
 // card 9
 document.getElementById("call-button-railway").addEventListener("click", function(){
     // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+   const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling Bangladesh Railway Helpline 163");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
 
-    // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
         <h2 class="text-[20px] font-semibold">Bangladesh Railway Helpline</h2>
-        <p class="text-[#5C5C5C]">163</p>
+        <p class="text-[#5C5C5C]">16445</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
 
 
 
