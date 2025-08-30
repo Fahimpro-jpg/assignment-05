@@ -40,30 +40,39 @@ let heartCount = 0;
 // call button event
 
 // card 1
-document.getElementById("call-button-emergency").addEventListener("click", function(){
-    
-    
-    // coin deduction output
-    const availableCoins = getInnerText("available-coins")
-     if (availableCoins < 20) {
-        alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
-        return;
-    }
+document.getElementById("call-button-emergency").addEventListener("click", function () {
+  // coin deduction output
+  const availableCoins = getInnerText("available-coins");
+  if (availableCoins < 20) {
+    alert("❌ You don’t have enough coins to make this call. To make a call need 20 coins");
+    return;
+  }
 
-    alert('📞 Calling National Emergency Service 999');
+  alert("📞 Calling National Emergency Service 999");
 
-    const newAvailableCoins = availableCoins - 20;
-    setInnerText("available-coins", newAvailableCoins);
+  const newAvailableCoins = availableCoins - 20;
+  setInnerText("available-coins", newAvailableCoins);
 
-    // history section
-     const entry = document.createElement("div");
-    entry.className = "ml-5 p-2 border-b border-gray-200";
-    entry.innerHTML = `
-        <h2 class="text-[20px] font-semibold">National Emergency Service</h2>
+//    local date & time
+  const now = new Date();
+  const time = now.toLocaleTimeString();  
+  
+
+  // history section
+  const entry = document.createElement("div");
+  entry.className = "ml-5 p-2 border-b border-gray-200";
+  entry.innerHTML = `
+        <div class ="flex justify-between">
+        <div>
+        <h2 class="text-[20px] font-semibold">Police Helpline</h2>
         <p class="text-[#5C5C5C]">999</p>
+        </div>
+        <p class="text-lg text-gray-500"> ${time}</p>
+        </div>
     `;
-    historySection.appendChild(entry);
-})
+  historySection.appendChild(entry);
+});
+
 // card 2
 document.getElementById("call-button-police").addEventListener("click", function(){
     // coin deduction output
@@ -267,3 +276,119 @@ document.getElementById("clear-data").addEventListener("click", function() {
   historySection.innerHTML = "";
   console.log('clear data')
 });
+
+
+// copy button
+// copy-btn-1
+let copyCount = 0;
+document.getElementById("copy-button").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+// copy-btn-2
+document.getElementById("copy-button-1").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-1").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+// copy-btn-3
+document.getElementById("copy-button-2").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-2").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+
+// copy-btn-4
+document.getElementById("copy-button-3").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-3").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+
+// copy-btn-5
+document.getElementById("copy-button-4").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-4").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+// copy-btn-6
+document.getElementById("copy-button-5").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-5").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+
+// copy-btn-7
+
+document.getElementById("copy-button-6").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-6").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+// copy-btn-8
+
+document.getElementById("copy-button-7").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-7").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
+
+// copy-btn-9
+document.getElementById("copy-button-8").addEventListener('click', function(){
+    const copyNumber = document.getElementById("hotline-number-8").innerText;
+
+     navigator.clipboard.writeText(copyNumber);
+      alert("✅ Number is  Copied: "+copyNumber);
+
+      copyCount++;
+    document.getElementById("copy-count").innerText = copyCount;
+
+})
